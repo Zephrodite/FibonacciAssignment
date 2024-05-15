@@ -1,5 +1,6 @@
 package com.example.fibonacciassignment.ui.page
 
+import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.BottomSheetScaffold
@@ -70,6 +71,7 @@ fun MainScreen(viewModel: MainViewModel? = null) {
         bottomBar = {
             if (showBottomSheet) {
                 ModalBottomSheet(
+                    modifier = Modifier.fillMaxHeight(0.5f),
                     onDismissRequest = {
                         showBottomSheet = false
                     },
